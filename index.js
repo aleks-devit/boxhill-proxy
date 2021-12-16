@@ -5,8 +5,8 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 // proxy middleware options
 const options = {
     target: 'http://cid-api.bhtafe.edu.au/api/v2/prod/courses', // target host
-    changeOrigin: true, // needed for virtual hosted sites
-    ws: true, // proxy websockets
+    // changeOrigin: true, // needed for virtual hosted sites
+    // ws: true, // proxy websockets
     pathRewrite: {
         '^/api/old-path': '/api/new-path', // rewrite path
         '^/api/remove/path': '/path', // remove base path
