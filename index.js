@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 // proxy middleware options
 const options = {
-    target: 'https://www.boxhill.edu.au/', // target host
+    target: 'http://cid-api.bhtafe.edu.au/api/v2/prod/courses', // target host
     changeOrigin: true, // needed for virtual hosted sites
     ws: true, // proxy websockets
     pathRewrite: {
@@ -24,4 +24,4 @@ const exampleProxy = createProxyMiddleware(options);
 // mount `exampleProxy` in web server
 const app = express();
 app.use('/api', exampleProxy);
-app.listen(3000);
+app.listen(80);
